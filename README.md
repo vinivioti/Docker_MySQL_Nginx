@@ -17,9 +17,9 @@ Enviar sequência de comandos na linha de comando ou o Docker-compose com os arq
 
 > Passo a passo
 ```
-Baixar o código no github https://github.com/vinivioti/Docker-MySQL-Nginx.git
+Baixar o código no github https://github.com/vinivioti/Docker_MySQL_Nginx.git
 abra o Visual Code na pasta do projeto
-Execute o comando:$ docker-compose up -d
+Execute o comando: docker-compose up -d
 Depois de tudo ok
 http://localhost:80  - (nginx)
 http://localhost:8080 - (MySQL)
@@ -27,6 +27,6 @@ Para acessar o MySQL - preencha os campos conforme segue:
 Servidor: mysql-server
 Usuário: root
 Senha: "Password1234!"
-Então será apresentado a mensagem: "Welcome to the MySQL monitor"
+Então será apresentado a lista de database, sendo a "root" a criada nesse processo.
 
 ```
