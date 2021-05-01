@@ -1,0 +1,37 @@
+#Mysql
+services:
+  mysql-app:
+    image: mysql:5.7.22
+    container_name: mysql
+    ports:
+      - "3306:3306"
+    environment: 
+        MYSQL_DATABASE: root
+        MYSQL_ROOT_PASSWORD: Password1234!
+        MYSQL_USER: root
+        SERVICE_TAGS: Trab_Leo_Vini
+    networks: 
+       - aula-network
+
+  adminer:
+    image: adminer
+    ports:
+       - 8080:8080
+    networks:
+      - aula-network
+
+#Nginx
+  webserver:
+    image: nginx
+    container_name: nginx
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "80:80"
+    networks:
+      - aula-network
+
+#Network
+networks:
+  aula-network:
+    driver: bridge
